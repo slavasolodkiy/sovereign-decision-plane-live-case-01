@@ -61,7 +61,7 @@ echo
 echo "=== RUNTIME ==="
 python3 --version
 swipl --version
-opa version | head -n 2
+opa version
 
 echo
 echo "=== COMMITTED ARTIFACT INTEGRITY ==="
