@@ -5,7 +5,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path("/root/sovereign-decision-plane-live-case-01")
+ROOT = Path(__file__).resolve().parent
 
 CASE_ID = "SDP-PASSPORT-T1B"
 MODEL_ID = "nemotron3:33b-q4_K_M"
