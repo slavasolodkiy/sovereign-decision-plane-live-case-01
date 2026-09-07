@@ -96,6 +96,13 @@ It does **not** download or re-run Nemotron.
 
 All identity data is synthetic.
 
+## Public artifacts
+
+- [Sprint wrap-up — Sovereign Decision Plane](https://www.dram.gold/Sovereign-Decision-Plane.html)
+- [Nemotron × FOL experiment page](https://www.dram.gold/Nemotron-FOL.html)
+- [X / @NansenID](https://x.com/NansenID/status/2096900477204001043)
+- [X / @SolodkiyUK](https://x.com/SolodkiyUK/status/2096918298596098323)
+
 ## Sprint context
 
 1. [FreeToken](https://www.solodkiy.cv/FreeToken.html)
@@ -108,10 +115,6 @@ All identity data is synthetic.
 Related preprint:
 
 [Algorithmic Sovereignty in Digital Banking](https://figshare.com/articles/preprint/Algorithmic_Sovereignty_in_Digital_Banking/33427318)
-
-Sprint wrap-up:
-
-https://www.dram.gold/Sovereign-Decision-Plane.html
 
 ## Author
 
