@@ -1,0 +1,19 @@
+
+========================================================================
+DETERMINISTIC VERDICT: NEED_MORE_EVIDENCE
+========================================================================
+PASS     passport_number_format         L898902C3
+FAIL     mrz_line_1_structure           value='P<UTO<SAMPLE<<ALICE<MARIA<<<<<<<<<<<<<<<<<', length=42
+PASS     mrz_line_2_structure           44 valid MRZ characters
+PASS     document_number_check          check digit=6
+FAIL     date_of_birth_check            expected=5, got=F
+FAIL     expiry_date_check              expected=7, got=Z
+FAIL     optional_data_check            expected=3, got=1
+FAIL     composite_check                expected=0, got=8
+PASS     passport_number_vs_mrz         'L898902C3'
+CONFLICT nationality_vs_mrz             visible='UTO', mrz='U09'
+CONFLICT sex_vs_mrz                     visible='F', mrz='3'
+CONFLICT date_of_birth_vs_mrz           visible='900312', mrz='003129'
+CONFLICT expiry_date_vs_mrz             visible='310421', mrz='104219'
+FAIL     uncertainty_calibration        model failed to mark these questionable fields uncertain: mrz_line_1
+

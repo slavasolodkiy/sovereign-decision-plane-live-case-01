@@ -5,7 +5,7 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path("/root/sovereign-decision-plane-live-case-01")
+ROOT = Path(__file__).resolve().parent
 
 CONTROL_JSON = ROOT / "input/green_prevalidated_control.json"
 FACTS = ROOT / "logic/green_facts.pl"
