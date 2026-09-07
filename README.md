@@ -1,5 +1,7 @@
 # Sovereign Decision Plane — Live Case 01
 
+[![Reproduce Live Case 01](https://github.com/slavasolodkiy/sovereign-decision-plane-live-case-01/actions/workflows/reproduce.yml/badge.svg)](https://github.com/slavasolodkiy/sovereign-decision-plane-live-case-01/actions/workflows/reproduce.yml)
+
 > **Same decision plane. Different evidence. Different outcome.**
 
 A small, local, synthetic demonstrator showing how an AI model can propose evidence without receiving authority to overrule deterministic controls or institutional policy.
@@ -45,11 +47,31 @@ The model may perceive and explain.
 
 ## Reproduce
 
+Reference environment for the recorded local run:
+
+- Python **3.12.3**
+- SWI-Prolog **9.0.4**
+- Open Policy Agent **1.20.2**
+- Ollama **0.30.11**
+- Nemotron tag **`nemotron3:33b-q4_K_M`**
+- Nemotron digest **`baa676a14e13181d7e638c911a7e9eb73c6fc4e799393d491cb37221a52729b2`**
+
+The public reproduction does **not** download or re-run Nemotron. It starts from
+the captured model candidate evidence and independently regenerates:
+
+1. deterministic validator output;
+2. Prolog/FOL facts;
+3. OPA input;
+4. FOL and OPA decisions.
+
+Each regenerated intermediate is checked against the committed artifact before
+the expected GREEN/RED outcomes are asserted.
+
 Prerequisites:
 
-- Python 3
+- Python 3.12
 - SWI-Prolog (`swipl`)
-- Open Policy Agent (`opa`)
+- Open Policy Agent 1.20.2 (`opa`)
 
 Run:
 
@@ -73,9 +95,9 @@ OPA           → ESCALATE_TO_HUMAN
 AI OVERRIDE   → false
 ```
 
-The public demo replays the captured candidate evidence through the deterministic verifier, formal-logic layer and OPA policy.
-
-It does **not** download or re-run Nemotron.
+GitHub Actions runs the same reproduction on a public GitHub-hosted Ubuntu
+runner. The workflow pins Python 3.12 and OPA 1.20.2; the installed SWI-Prolog
+version is printed in the job log.
 
 ## What this demonstrates
 
@@ -84,6 +106,7 @@ It does **not** download or re-run Nemotron.
 - Formal logic and institutional policy can remain separate layers.
 - The same downstream stack supports both an ALLOW path and an escalation path.
 - AI override remains explicitly disabled.
+- Validator output, formal facts and OPA input can be regenerated from the captured evidence.
 - Executed decisions can be preserved with evidence packets and SHA-256 hashes.
 
 ## What this does not claim
@@ -93,6 +116,7 @@ It does **not** download or re-run Nemotron.
 - This is not regulatory approval or a compliance claim.
 - The GREEN path is not a successful Nemotron OCR benchmark.
 - Formal consistency does not prove that a legal or institutional policy is complete or correct.
+- The public CI replay does not reproduce the original vision inference itself.
 
 All identity data is synthetic.
 
