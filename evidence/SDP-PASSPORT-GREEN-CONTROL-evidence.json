@@ -1,0 +1,69 @@
+{
+  "artifact_type": "sovereign_decision_plane_evidence_packet",
+  "artifact_version": "0.1.0",
+  "generated_at_utc": "2026-09-07T11:33:31.126027+00:00",
+  "case": {
+    "case_id": "SDP-PASSPORT-GREEN-CONTROL",
+    "case_type": "passport_evidence_integrity",
+    "synthetic_data": true,
+    "environment": "local_olares_demonstrator"
+  },
+  "control_design": {
+    "type": "PREVALIDATED_SYNTHETIC_CONTROL",
+    "nemotron_perception_test": false,
+    "purpose": "Positive control proving that valid evidence can traverse the same downstream stack to ALLOW."
+  },
+  "verification": {
+    "mrz_integrity": true,
+    "identity_consistent": true,
+    "evidence_complete": true
+  },
+  "formal_logic": {
+    "engine": "SWI-Prolog",
+    "decision": "accept_extraction",
+    "reasons": []
+  },
+  "operational_decision": {
+    "ai_authorised_to_override": false,
+    "outcome": "ALLOW",
+    "policy_conditions_satisfied": true,
+    "reasons": [
+      "Evidence integrity and formal decision requirements passed."
+    ]
+  },
+  "authority_boundary": {
+    "ai_authorised_to_override": false,
+    "decision_authority": "deterministic verification + formal logic + OPA policy"
+  },
+  "artifacts": {
+    "input/green_prevalidated_control.json": {
+      "sha256": "f87cbf26ecd8f54a5f7d8176c43c467861b91ec0b9b8b9fd21f22b03278eaefd",
+      "bytes": 402
+    },
+    "verification/green_validator_output.txt": {
+      "sha256": "ae6c982654e458e8a82fd660d217a1e0eacbe88a9b9ef7bf7196029f7eeee1ab",
+      "bytes": 1130
+    },
+    "logic/green_facts.pl": {
+      "sha256": "0f14bc85156ffbeb573a0885b4af5bfee6e5aac219056b761e51a10dfd8d7ddc",
+      "bytes": 1100
+    },
+    "logic/policy.pl": {
+      "sha256": "734f497d67aa45b89b9417c6603579c2866dab952d24d98aec09c50c09bda14c",
+      "bytes": 1572
+    },
+    "input/green_opa_input.json": {
+      "sha256": "e7dd538aacb68bc368ac1f53dc363a80e0ba53964a5be029eb237c20382264f4",
+      "bytes": 724
+    },
+    "policy/passport_gate.rego": {
+      "sha256": "cddb3aa202aad08048a129b427a8e2245214833ba149770c87782d698a50647b",
+      "bytes": 1238
+    },
+    "evidence/SDP-PASSPORT-GREEN-CONTROL-opa-decision.json": {
+      "sha256": "829bb0f114d0a4c947c0b3e5405abc550daece873e99a45c4d0833396944a29c",
+      "bytes": 188
+    }
+  },
+  "integrity_note": "This GREEN case is deliberately a prevalidated synthetic control and is NOT presented as successful Nemotron MRZ extraction. Its purpose is to prove the positive ALLOW path of the deterministic and policy stack. The separate RED case contains model-derived evidence and results in escalation."
+}

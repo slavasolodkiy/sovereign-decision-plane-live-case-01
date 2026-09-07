@@ -1,0 +1,11 @@
+{
+  "ai_authorised_to_override": false,
+  "outcome": "ESCALATE_TO_HUMAN",
+  "policy_conditions_satisfied": false,
+  "reasons": [
+    "cross_field_conflict",
+    "deterministic_failure",
+    "identity_conflict",
+    "mrz_integrity_failed"
+  ]
+}

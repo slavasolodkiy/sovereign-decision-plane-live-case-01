@@ -1,0 +1,14 @@
+{
+  "document_type": "P",
+  "issuing_country": "UTO",
+  "surname": "SAMPLE",
+  "given_names": "ALICE MARIA",
+  "nationality": "UTO",
+  "date_of_birth": "12 MAR 1990",
+  "sex": "F",
+  "expiry_date": "21 APR 2031",
+  "passport_number": "L898902C3",
+  "mrz_line_1": "P<UTOSAMPLE<<ALICE<MARIA<<<<<<<<<<<<<<<<<<<<",
+  "mrz_line_2": "L898902C36UTO9003129F3104219ZE184226B<<<<<18",
+  "uncertain_fields": []
+}

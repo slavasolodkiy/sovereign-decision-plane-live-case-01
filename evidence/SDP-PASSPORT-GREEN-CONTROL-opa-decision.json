@@ -1,0 +1,8 @@
+{
+  "ai_authorised_to_override": false,
+  "outcome": "ALLOW",
+  "policy_conditions_satisfied": true,
+  "reasons": [
+    "Evidence integrity and formal decision requirements passed."
+  ]
+}

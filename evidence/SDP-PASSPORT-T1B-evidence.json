@@ -1,0 +1,107 @@
+{
+  "artifact_type": "sovereign_decision_plane_evidence_packet",
+  "artifact_version": "0.1.0",
+  "generated_at_utc": "2026-09-07T11:26:36.617654+00:00",
+  "case": {
+    "case_id": "SDP-PASSPORT-T1B",
+    "case_type": "passport_evidence_integrity",
+    "synthetic_data": true,
+    "environment": "local_olares_demonstrator"
+  },
+  "architecture": {
+    "perception": "Nemotron 3 Nano Omni via Ollama",
+    "deterministic_verification": "Python ICAO/MRZ validator",
+    "formal_logic": "SWI-Prolog",
+    "institutional_policy": "Open Policy Agent / Rego",
+    "explanation": "Nemotron, explanation-only",
+    "ai_authorised_to_override": false
+  },
+  "model": {
+    "model_id": "nemotron3:33b-q4_K_M",
+    "ollama_model_digest": "baa676a14e13181d7e638c911a7e9eb73c6fc4e799393d491cb37221a52729b2",
+    "quantization": "Q4_K_M",
+    "context_length": null
+  },
+  "verification": {
+    "mrz_integrity": false,
+    "identity_consistent": false,
+    "evidence_complete": false
+  },
+  "formal_logic": {
+    "engine": "SWI-Prolog",
+    "decision": "request_better_evidence",
+    "reasons": [
+      "cross_field_conflict",
+      "deterministic_failure",
+      "identity_conflict",
+      "mrz_integrity_failed"
+    ]
+  },
+  "operational_decision": {
+    "ai_authorised_to_override": false,
+    "outcome": "ESCALATE_TO_HUMAN",
+    "policy_conditions_satisfied": false,
+    "reasons": [
+      "cross_field_conflict",
+      "deterministic_failure",
+      "identity_conflict",
+      "mrz_integrity_failed"
+    ]
+  },
+  "runtime": {
+    "opa": "Version: 1.20.2\nBuild Commit: b2c26708e9d55645d7f837db495031f7e4152594-dirty\nBuild Timestamp: 2026-09-03T20:35:14Z\nBuild Hostname: \nGo Version: go1.27.1\nPlatform: linux/amd64\nRego Version: v1\nWebAssembly: available",
+    "swipl": "SWI-Prolog version 9.0.4 for x86_64-linux"
+  },
+  "artifacts": {
+    "specimen_passport_valid": {
+      "path": "input/specimen_passport_valid.png",
+      "sha256": "7febab2bf8f497a31cd30e65e5cddd23e903245173d233420adcb3080709ca3a",
+      "bytes": 70292
+    },
+    "t1b_opa_input": {
+      "path": "input/t1b_opa_input.json",
+      "sha256": "9e1b9fe91a6c0cbc60b77b5535ebac03d461a3e8d95fef21056131751c619d05",
+      "bytes": 613
+    },
+    "T1b_api_result": {
+      "path": "perception/T1b_api_result.json",
+      "sha256": "49fff7f042ab2b8bba2f4cadc98f2d80f182d335e91cec573e976f6d0e350d85",
+      "bytes": 400
+    },
+    "validator": {
+      "path": "verification/validator.py",
+      "sha256": "cb934f8f2c80742ae2fb1f96b533a89fde6b0b7e323dae3aaf9208e017c3f9e4",
+      "bytes": 7065
+    },
+    "t1b_facts": {
+      "path": "logic/t1b_facts.pl",
+      "sha256": "a38405ccc8931c129f5ecc1fa023f272734146ac03f4a511f04591619e722119",
+      "bytes": 955
+    },
+    "policy": {
+      "path": "logic/policy.pl",
+      "sha256": "734f497d67aa45b89b9417c6603579c2866dab952d24d98aec09c50c09bda14c",
+      "bytes": 1572
+    },
+    "passport_gate": {
+      "path": "policy/passport_gate.rego",
+      "sha256": "cddb3aa202aad08048a129b427a8e2245214833ba149770c87782d698a50647b",
+      "bytes": 1238
+    },
+    "SDP-PASSPORT-T1B-opa-decision": {
+      "path": "evidence/SDP-PASSPORT-T1B-opa-decision.json",
+      "sha256": "732321fa04ca029eb250348e0cb7c69e684e120f70979d5d94da091c7d1875c0",
+      "bytes": 244
+    },
+    "final_explanation": {
+      "path": "artifacts/final_explanation.json",
+      "sha256": "604187e84111035fed7f3765eed662fa8e49bef302b5bf452b51bf317e2544a9",
+      "bytes": 312
+    }
+  },
+  "reproducibility": {
+    "opa_check": "opa check policy/passport_gate.rego",
+    "opa_eval": "opa eval --format=pretty --data policy/passport_gate.rego --input input/t1b_opa_input.json 'data.sovereign_decision_plane.passport.decision'"
+  },
+  "integrity_note": "This is an illustrative, synthetic, locally executed technical demonstrator. It is not a production identity decision, legal opinion, regulatory filing, regulatory approval, or claim of compliance. The evidence packet records the executed control path and artifact hashes."
+}

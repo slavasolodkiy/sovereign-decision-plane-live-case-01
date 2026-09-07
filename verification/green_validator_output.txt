@@ -1,0 +1,23 @@
+
+========================================================================
+DETERMINISTIC VERDICT: ACCEPT_EXTRACTION
+========================================================================
+PASS     passport_number_format         L898902C3
+PASS     mrz_line_1_structure           44 valid MRZ characters
+PASS     mrz_line_2_structure           44 valid MRZ characters
+PASS     document_type_vs_mrz           'P'
+PASS     issuing_country_vs_mrz         'UTO'
+PASS     surname_vs_mrz                 'SAMPLE'
+PASS     given_names_vs_mrz             'ALICE MARIA'
+PASS     document_number_check          check digit=6
+PASS     date_of_birth_check            check digit=9
+PASS     expiry_date_check              check digit=9
+PASS     optional_data_check            check digit=1
+PASS     composite_check                check digit=8
+PASS     passport_number_vs_mrz         'L898902C3'
+PASS     nationality_vs_mrz             'UTO'
+PASS     sex_vs_mrz                     'F'
+PASS     date_of_birth_vs_mrz           '900312'
+PASS     expiry_date_vs_mrz             '310421'
+PASS     uncertainty_calibration        uncertain_fields=[]
+

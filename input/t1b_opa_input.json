@@ -1,0 +1,27 @@
+{
+  "case_id": "SDP-PASSPORT-T1B",
+  "case_type": "passport_evidence_integrity",
+  "synthetic_data": true,
+  "verification": {
+    "mrz_integrity": false,
+    "identity_consistent": false,
+    "evidence_complete": false
+  },
+  "formal_logic": {
+    "engine": "SWI-Prolog",
+    "decision": "request_better_evidence",
+    "reasons": [
+      "cross_field_conflict",
+      "deterministic_failure",
+      "identity_conflict",
+      "mrz_integrity_failed"
+    ]
+  },
+  "ai": {
+    "role": "perception_and_explanation_only",
+    "authorised_to_override": false
+  },
+  "policy": {
+    "prohibited_condition": false
+  }
+}

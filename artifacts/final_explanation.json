@@ -1,0 +1,6 @@
+
+{
+   "decision": "request_better_evidence",
+   "explanation": "Human‑readable fields were successfully extracted, but formal MRZ validation and cross‑field consistency checks failed due to integrity and identity conflicts.",
+   "next_action": "Request a new, valid evidence submission from the applicant."
+}

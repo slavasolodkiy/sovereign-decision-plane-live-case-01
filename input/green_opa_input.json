@@ -1,0 +1,27 @@
+{
+  "case_id": "SDP-PASSPORT-GREEN-CONTROL",
+  "case_type": "passport_evidence_integrity",
+  "synthetic_data": true,
+  "control": {
+    "type": "PREVALIDATED_SYNTHETIC_CONTROL",
+    "model_used_as_evidence_source": false,
+    "purpose": "Demonstrate the known-valid ALLOW path of the same verification, logic and institutional-policy stack."
+  },
+  "verification": {
+    "mrz_integrity": true,
+    "identity_consistent": true,
+    "evidence_complete": true
+  },
+  "formal_logic": {
+    "engine": "SWI-Prolog",
+    "decision": "accept_extraction",
+    "reasons": []
+  },
+  "ai": {
+    "role": "not_used_as_green_evidence_source",
+    "authorised_to_override": false
+  },
+  "policy": {
+    "prohibited_condition": false
+  }
+}
