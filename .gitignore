@@ -8,3 +8,4 @@ venv/
 *.pem
 *.crt
 .DS_Store
+local-witness/

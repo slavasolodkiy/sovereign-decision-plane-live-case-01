@@ -140,6 +140,18 @@ Related preprint:
 
 [Algorithmic Sovereignty in Digital Banking](https://figshare.com/articles/preprint/Algorithmic_Sovereignty_in_Digital_Banking/33427318)
 
+## Optional Google Cloud Storage witness
+
+An optional adapter exports a small receipt from a recorded synthetic decision
+packet to Google Cloud Storage, then verifies the exact object generation by
+reading it back and matching SHA-256. It does not change the local decision core.
+See [Cloud Witness setup, tests and limitations](docs/cloud-witness.md).
+
+Current status: a real 545-byte GCS upload and generation-specific readback were
+verified on 9 September 2026; matching SHA-256 is recorded in the linked report.
+Five offline contract tests also pass. The receipt excludes raw passport
+images and extracted fields. This feature makes no WORM or decision-truth claim.
+
 ## Author
 
 **Slava Solodkiy**

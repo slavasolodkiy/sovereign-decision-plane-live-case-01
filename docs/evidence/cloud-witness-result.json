@@ -1,0 +1,17 @@
+{
+  "status": "GCS_READBACK_VERIFIED",
+  "created_this_run": true,
+  "object": "sdp-witness/771cbab54cd029e8c65ad520e1bdc72ce219cc14eaeb6a491edef8bed1999381.json",
+  "generation": "1788942747393502",
+  "gcs_time_created": "2026-09-09T08:32:27.399Z",
+  "receipt_sha256": "771cbab54cd029e8c65ad520e1bdc72ce219cc14eaeb6a491edef8bed1999381",
+  "readback_sha256": "771cbab54cd029e8c65ad520e1bdc72ce219cc14eaeb6a491edef8bed1999381",
+  "bytes": 545,
+  "verified_at_utc": "2026-09-09T08:32:28.058972+00:00",
+  "retention_claim": "none",
+  "decision_correctness_claim": "none",
+  "redactions": [
+    "bucket identifier omitted"
+  ],
+  "provenance": "Author-recorded output from the adapter executed in Google Cloud Shell; not an independently signed attestation."
+}

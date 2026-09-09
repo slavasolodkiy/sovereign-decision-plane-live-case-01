@@ -37,3 +37,7 @@ jobs:
         run: |
           chmod +x ./run-demo.sh
           ./run-demo.sh
+
+      - name: Test optional Google Cloud witness
+        run: |
+          python3 -m unittest discover -s tests -p 'test_gcp_witness.py' -v
