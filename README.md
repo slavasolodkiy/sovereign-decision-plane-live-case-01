@@ -1,19 +1,52 @@
-# Sovereign Decision Plane — Live Case 01
+<!-- ============================================================
+     SOVEREIGN DECISION PLANE · LIVE CASE 01 · README
+     Teenage-Engineering × Nothing × acid-glitch aesthetic
+     Sovereign Agent Lab · design system v2
+     ============================================================ -->
+
+<div align="center">
+
+<pre>
+██████╗ ███████╗ ██████╗██╗███████╗██╗ ██████╗ ███╗   ██╗
+██╔══██╗██╔════╝██╔════╝██║██╔════╝██║██╔═══██╗████╗  ██║
+██║  ██║█████╗  ██║     ██║█████╗  ██║██║   ██║██╔██╗ ██║
+██║  ██║██╔══╝  ██║     ██║██╔══╝  ██║██║   ██║██║╚██╗██║
+██████╔╝███████╗╚██████╗██║██║     ██║╚██████╔╝██║ ╚████║
+╚═════╝ ╚══════╝ ╚═════╝╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+██████╗ ██╗      █████╗ ███╗   ██╗███████╗
+██╔══██╗██║     ██╔══██╗████╗  ██║██╔════╝
+██████╔╝██║     ███████║██╔██╗ ██║█████╗
+██╔═══╝ ██║     ██╔══██║██║╚██╗██║██╔══╝
+██║     ███████╗██║  ██║██║ ╚████║███████╗
+╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝
+ L I V E   C A S E   0 1
+</pre>
+
+# `SOVEREIGN DECISION PLANE`
+
+**Same decision plane. Different evidence. Different outcome.**
+
+> The model may perceive and explain. **It cannot override a failed deterministic control.**
 
 [![Reproduce Live Case 01](https://github.com/slavasolodkiy/sovereign-decision-plane-live-case-01/actions/workflows/reproduce.yml/badge.svg)](https://github.com/slavasolodkiy/sovereign-decision-plane-live-case-01/actions/workflows/reproduce.yml)
 
-> **Same decision plane. Different evidence. Different outcome.**
+<img src="https://img.shields.io/badge/ROLE-LIVE%20CASE%2001%20%C2%B7%20evidence%20gate%20%2B%20institutional%20action-c8ff00?style=for-the-badge&labelColor=0b0d11" alt="role">
+<img src="https://img.shields.io/badge/STACK-Python%203.12%20%C2%B7%20SWI--Prolog%20%C2%B7%20OPA-35f2ff?style=for-the-badge&labelColor=0b0d11" alt="stack">
+<img src="https://img.shields.io/badge/MODEL-NVIDIA%20Nemotron-9b7bff?style=for-the-badge&labelColor=0b0d11" alt="model">
+<img src="https://img.shields.io/badge/AI%20OVERRIDE-false-ff2d9a?style=for-the-badge&labelColor=0b0d11" alt="ai override">
+<img src="https://img.shields.io/badge/DATA-synthetic%20only-ff9500?style=for-the-badge&labelColor=0b0d11" alt="data">
 
-**Role in the Lab:** Live Case 01 — evidence gate and institutional action.
+[Canonical project page](https://www.solodkiy.cv/Sovereign-Decision-Plane.html) · [Full research trail — Sovereign Agent Lab](https://www.solodkiy.cv/sovereign-agent-lab.html)
 
-- [Canonical project page](https://www.solodkiy.cv/Sovereign-Decision-Plane.html)
-- [Full research trail — Sovereign Agent Lab](https://www.solodkiy.cv/sovereign-agent-lab.html)
+</div>
+
+---
+
+## ▚ RESULT
 
 A small, local, synthetic demonstrator showing how an AI model can propose evidence without receiving authority to overrule deterministic controls or institutional policy.
 
-## Result
-
-| Path | Evidence | Formal decision | Institutional action | AI override |
+| PATH | EVIDENCE | FORMAL DECISION | INSTITUTIONAL ACTION | AI OVERRIDE |
 |---|---|---|---|---|
 | 🔴 RED | Nemotron-derived | `request_better_evidence` | `ESCALATE_TO_HUMAN` | `false` |
 | 🟢 GREEN | Prevalidated synthetic control | `accept_extraction` | `ALLOW` | `false` |
@@ -22,7 +55,7 @@ The GREEN case is deliberately a **PREVALIDATED_SYNTHETIC_CONTROL**. It is **not
 
 The model-derived RED case failed machine-verifiable MRZ integrity checks and therefore did not earn the ALLOW path.
 
-## Architecture
+## ▚ ARCHITECTURE
 
 ```text
 Evidence
@@ -40,9 +73,16 @@ ALLOW / ESCALATE_TO_HUMAN / BLOCK
 Evidence Packet + SHA-256
 ```
 
-The model may perceive and explain. **It cannot override a failed deterministic control.**
+```text
+ ┌────────────┐   ┌────────────┐   ┌────────────┐   ┌────────────┐   ┌────────────┐
+ │ PERCEIVE   │──►│ VERIFY     │──►│ DERIVE     │──►│ PERMIT     │──►│ PRESERVE   │
+ │ Nemotron   │   │ determin-  │   │ formal     │   │ policy     │   │ packet +   │
+ │ candidate  │   │ istic MRZ  │   │ logic FOL  │   │ OPA/Rego   │   │ SHA-256    │
+ └────────────┘   └────────────┘   └────────────┘   └────────────┘   └────────────┘
+      proposes        can reject         follows          permits          receipts
+```
 
-## Reproduce
+## ▚ REPRODUCE
 
 Reference environment for the recorded local run:
 
@@ -81,7 +121,7 @@ OPA           → ESCALATE_TO_HUMAN
 AI OVERRIDE   → false
 ```
 
-## What this demonstrates
+## ▚ WHAT THIS DEMONSTRATES
 
 - AI can be used as a perception layer without being granted final decision authority.
 - Deterministic evidence can reject plausible but invalid model output.
@@ -91,7 +131,7 @@ AI OVERRIDE   → false
 - Validator output, formal facts and OPA input can be regenerated from captured evidence.
 - Executed decisions can be preserved with evidence packets and SHA-256 hashes.
 
-## What this does not claim
+## ▚ WHAT THIS DOES NOT CLAIM
 
 - This is not a production KYC or AML system.
 - This is not legal advice, regulatory approval or a compliance claim.
@@ -101,12 +141,18 @@ AI OVERRIDE   → false
 
 All identity data is synthetic.
 
-## Optional Google Cloud Storage witness
+## ▚ OPTIONAL GOOGLE CLOUD STORAGE WITNESS
 
 An optional adapter exports a small receipt from a recorded synthetic decision packet to Google Cloud Storage, then verifies the exact object generation by reading it back and matching SHA-256. It does not change the local decision core. See `docs/cloud-witness.md`.
 
 Current status: a real 545-byte GCS upload and generation-specific readback were verified on 9 September 2026. Five offline contract tests also pass. The receipt excludes raw passport images and extracted fields. This feature makes no WORM or decision-truth claim.
 
-## Author
+## ▚ AUTHOR
 
 **Slava Solodkiy** — experimental / research demonstrator, September 2026.
+
+<div align="center">
+
+`SAME PLANE · DIFFERENT EVIDENCE · DIFFERENT OUTCOME`
+
+</div>
